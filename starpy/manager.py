@@ -255,7 +255,7 @@ class AMIProtocol(basic.LineOnlyReceiver):
                         except ValueError as err:
                             # XXX data-safety issues, what prevents the
                             # VERSION_PREFIX from showing up in a data-set?
-                            log.warn("Improperly formatted line received and "
+                            log.info("Improperly formatted line received and "
                                      "ignored: %r", line)
                         else:
                             key = key.lower().strip()
